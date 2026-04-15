@@ -2,7 +2,7 @@ import {
     DescriptionSection,
     DescriptionTitle,
     DescriptionText
-} from "./Description.styles";
+} from "./Description.styles.ts";
 
 export default function Description(): JSX.Element {
     return (

@@ -3,9 +3,9 @@ import {
     SkillsRow,
     Circle,
     SkillsTitle
-} from "./Skills.styles";
+} from "./Skills.styles.ts";
 
-import { Icon } from "../Icon/Icon";
+import { Icon } from "../Icon/Icon.tsx";
 
 const icons = [
     "codeSvg",

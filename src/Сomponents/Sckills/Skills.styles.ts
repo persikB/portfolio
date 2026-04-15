@@ -10,8 +10,22 @@ export const SkillsSection = styled.section`
 
     gap: 60px;
 
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+`;
+
+
+export const SkillsTitle = styled.h2`
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+
+    color: #e5f8f1;
+
+    text-align: center;
 `;
 
 export const SkillsRow = styled.div`
@@ -35,16 +49,3 @@ export const Circle = styled.div`
   justify-content: center;
 `;
 
-
-export const SkillsTitle = styled.h2`
-    margin: 0;
-    font-family: Montserrat, sans-serif;
-    font-weight: 600;
-    font-size: 27px;
-    line-height: 26px;
-    letter-spacing: 0.04em;
-
-    color: #BDEBEA;
-
-    text-align: center;
-`;

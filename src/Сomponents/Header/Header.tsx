@@ -3,9 +3,9 @@ import {
     HeaderNav,
     HeaderWrapper,
     HeaderNavItem
-} from "./Header.styles";
+} from "./Header.styles.ts";
 
-const items = ["HOME", "ABOUT ME", "SKILLS", "PROJECTS", "CONTACTS"];
+const items = ["HOME", "ABOUT ME", "SKILLS", "CONTACTS"];
 
 export default function Header(): JSX.Element {
     const [active, setActive] = useState("HOME");

@@ -1,9 +1,9 @@
 import './App.css'
-import Preview from "./Preview/Preview.tsx";
-import Header from "./Header/Header.tsx";
-import Description from "./Description/Description.tsx";
-import Skills from "./Sckills/Skills.tsx";
-import Contacts from "./Contacts/Contacts.tsx";
+import Preview from "./Сomponents/Preview/Preview.tsx";
+import Header from "./Сomponents/Header/Header.tsx";
+import Description from "./Сomponents/Description/Description.tsx";
+import Skills from "./Сomponents/Sckills/Skills.tsx";
+import Contacts from "./Сomponents/Contacts/Contacts.tsx";
 
 function App() {
     return (

@@ -5,9 +5,9 @@ import {
     FormRow,
     FormLabel,
     Input,
-    Textarea,
-    ContactsButton
-} from "./Contacts.styles";
+    Textarea
+} from "./Contacts.styles.ts";
+import {Button} from "../Shared/Button.ts";
 
 export default function Contacts(): JSX.Element {
     return (
@@ -16,22 +16,21 @@ export default function Contacts(): JSX.Element {
 
             <FormWrapper>
                 <FormRow>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>Email : </FormLabel>
                     <Input type="text" />
                 </FormRow>
 
                 <FormRow>
-                    <FormLabel>Subject</FormLabel>
+                    <FormLabel>Subject : </FormLabel>
                     <Input type="text" />
                 </FormRow>
 
                 <FormRow>
-                    <FormLabel>Content</FormLabel>
+                    <FormLabel>Content : </FormLabel>
                     <Textarea />
                 </FormRow>
-
-                <ContactsButton>Send</ContactsButton>
             </FormWrapper>
+            <Button>Send</Button>
         </ContactsSection>
     );
 }

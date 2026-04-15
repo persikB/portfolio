@@ -3,19 +3,21 @@ import styled from "styled-components";
 export const HeaderWrapper = styled.header`
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+
+  margin: 0 auto;
 
   width: 1400px;
   height: 70px;
 
   background: #090a14;
 
-  clip-path: polygon(0 0, 100% 0, 94% 100%, 8% 100%);
-
   display: flex;
   align-items: center;
   justify-content: center;
+
+  box-shadow: 0 0 10px 1px #00D9F5;
 
   z-index: 1000;
 `;
@@ -34,17 +36,15 @@ export const HeaderNavItem = styled.div<{ $active?: boolean }>`
 
   color: #00F5A0;
 
-  transition: all 0.2s ease;
+  transition: color, text-shadow 0.2s ease;
 
-  ${({ $active }) =>
-    $active &&
-    `
-    color: #00D9F5;
-    text-shadow: 0 0 10px #00D9F5;
-  `}
-
-  &:hover {
-    color: #00D9F5;
-    text-shadow: 0 0 6px #00D9F5;
-  }
+  ${({ $active }) => {
+    if ($active) {
+      return `
+      color: #00D9F5;
+      text-shadow: 0 0 10px #00D9F5;
+    `;
+    }
+    return "";
+  }}
 `;

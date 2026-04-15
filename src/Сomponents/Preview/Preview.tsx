@@ -6,11 +6,11 @@ import {
     PreviewName,
     PreviewText,
     PreviewImage,
-    PreviewButton,
     PreviewWrapper,
     Right
-} from "./Preview.styles";
-import Avatar from "../assets/images/avatar.webp";
+} from "./Preview.styles.ts";
+import {Button} from "../Shared/Button.ts";
+import Avatar from "../../assets/images/avatar.webp";
 
 export default function Preview(): JSX.Element {
     return (
@@ -27,7 +27,7 @@ export default function Preview(): JSX.Element {
                         sint. Velit officia consequat duis enim velit mollit. Exercitation
                         veniam consequat sunt.
                     </PreviewText>
-                    <PreviewButton>Contact me</PreviewButton>
+                    <Button>Contact me</Button>
                 </Left>
 
                 <Right>
