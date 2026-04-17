@@ -35,4 +35,6 @@ export const DescriptionText = styled.p`
     color: #BDEBEA;
 
     text-align: center;
+    
+    padding: 0 20px;
 `;

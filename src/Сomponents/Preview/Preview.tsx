@@ -10,7 +10,7 @@ import {
     Img
 } from "./Preview.styles.ts";
 import {Button} from "../Shared/Button.ts";
-import Avatar from "../../assets/images/avatar.webp";
+import Avatar from "../../assets/images/avatar.svg";
 
 export default function Preview(): JSX.Element {
     return (

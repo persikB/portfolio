@@ -15,13 +15,13 @@ export default function Contacts(): JSX.Element {
 
             <FormWrapper>
                 <FormLabel>Email :</FormLabel>
-                <Input $row={1} />
+                <Input $row={1} placeholder="Enter your email"/>
 
-                <FormLabel>Subject :</FormLabel>
-                <Input $row={2} />
+                <FormLabel>Name :</FormLabel>
+                <Input $row={2} placeholder="Enter your name"/>
 
-                <FormLabel>Content :</FormLabel>
-                <Textarea />
+                <FormLabel>Message :</FormLabel>
+                <Textarea placeholder="Enter your message"/>
             </FormWrapper>
             <Button>Send</Button>
         </ContactsSection>

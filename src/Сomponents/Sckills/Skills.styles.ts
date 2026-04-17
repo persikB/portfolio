@@ -36,6 +36,7 @@ export const SkillsRow = styled.div`
 
     gap: clamp(20px, 4vw, 50px); //зависимость отступов от ширины экрана
     flex-wrap: wrap; //разрешен перенос на другую строку 
+    padding: 0 20px;
 `;
 
 export const Circle = styled.div`

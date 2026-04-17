@@ -27,5 +27,10 @@ export const GlobalStyle = createGlobalStyle`
     button {
         font-family: inherit; //берет шрифт из body
     }
-    
+
+    &::placeholder {
+        font-family: Montserrat, sans-serif;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.5);
+    }
 `;
