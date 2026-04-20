@@ -1,4 +1,6 @@
 import sprite from "../../assets/images/code.svg";
+import styled from "styled-components";
+
 
 type IconProps = {
     id: string;
@@ -9,8 +11,23 @@ type IconProps = {
 
 export const Icon = ({id, width = 150, height = 150,viewBox}: IconProps) => {
     return (
-        <svg width={width} height={height} viewBox={viewBox}>
+        <StyledSvg width={width} height={height} viewBox={viewBox}>
             <use href={`${sprite}#${id}`}/>  {/*на старых браузерах все равно потребуется xlinkHref*/}
-        </svg>
+        </StyledSvg>
     );
 };
+
+
+const StyledSvg = styled.svg`
+    color: #FFFFFF3F;
+
+    transition: color 0.2s ease, transform 0.3s ease;
+
+    &:hover {
+        color: #e5f8f1;
+        transform: scale(1.3);
+        transform-origin: center;
+    }
+;`
+
+

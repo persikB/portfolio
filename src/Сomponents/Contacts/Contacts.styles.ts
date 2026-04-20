@@ -3,22 +3,20 @@ import Image from "../../assets/images/background3.svg"
 
 export const ContactsSection = styled.section`
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
 
     background: url(${Image});
     background-size: cover; //масштабирование изображения
     background-position: center; //центрируем изображение
     background-repeat: no-repeat; //изображение не повторяется
 
-    display: flex;
-    flex-direction: column; //элементы идут вертикально
+    display: flex; //центрирование >
+    flex-direction: column; //элементы по вертикали
     align-items: center;
-    justify-content: center;
-    padding: clamp(60px, 10vh, 120px) 0; //зависимость от экрана устройства
 `;
 
 export const ContactsTitle = styled.h2`
-    margin: 0 0 clamp(30px, 4vh, 60px) 0;
+    margin: clamp(30px, 4vh, 60px) 0 clamp(30px, 4vh, 60px) 0;
 
     font-family: Montserrat, sans-serif;
     font-weight: 600;
@@ -59,8 +57,6 @@ export const FormLabel = styled.label`
     text-transform: uppercase;
     font-weight: 600;
     text-shadow: 0 0 0.5rem #0a0e39;
-    
-    
 `;
 
 
@@ -107,4 +103,5 @@ export const Textarea = styled.textarea`
     font-family: Montserrat, sans-serif;
     font-size: clamp(0.8rem, 2vw, 1.2rem);
 `;
+
 

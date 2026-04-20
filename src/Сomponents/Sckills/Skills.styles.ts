@@ -9,9 +9,8 @@ export const SkillsSection = styled.section`
     align-items: center; //центрирование >
 
     gap: 60px;
-    padding: clamp(60px, 8vw, 100px) 0; //отступы в зависимости от ширины экрана
+    
 `;
-
 
 export const SkillsTitle = styled.h2`
     margin: 0;
@@ -36,8 +35,8 @@ export const SkillsRow = styled.div`
     max-width: 900px;
 
     gap: clamp(20px, 4vw, 50px); //зависимость отступов от ширины экрана
-    flex-wrap: wrap; //разрешен перенос на другую строку 
-    padding: 0 20px;
+    flex-wrap: wrap; //разрешен перенос на другую строку
+    padding: clamp(40px, 4vw, 40px) 20px clamp(40px, 4vw, 70px) 20px; //отступы в зависимости от ширины экрана
 `;
 
 

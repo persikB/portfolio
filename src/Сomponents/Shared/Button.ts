@@ -18,6 +18,18 @@ export const Button = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
+    
     border-radius: 10px;
+
+    cursor: pointer;
+    
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    transition: box-shadow 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 0 10px #00D9F5;
+        transform: scale(1.1);
+        transform-origin: center;
+    }
 
 `;

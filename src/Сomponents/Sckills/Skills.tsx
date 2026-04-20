@@ -4,7 +4,8 @@ import {
     SkillsTitle
 } from "./Skills.styles.ts";
 
-import { Icon } from "../Icon/Icon.tsx";
+import { Icon } from "../sprites/Icon.tsx";
+import {Frame} from "../sprites/Frame.tsx";
 
 const icons = [
     "codeSvg",
@@ -15,11 +16,12 @@ const icons = [
     "gitSvg"
 ];
 
+
 export default function Skills(): JSX.Element {
     return (
         <SkillsSection>
+            <Frame id="FrameUpDark" viewBox="0 0 1894 74"/>
             <SkillsTitle>My skills</SkillsTitle>
-
             <SkillsRow>
                 {icons.map((id) => (
                     <Icon key={id} id={id} width={80} height={80} viewBox={"0 0 150 150"}/>

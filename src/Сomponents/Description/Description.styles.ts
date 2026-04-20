@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const DescriptionSection = styled.section`
     width: 100%;
     background: #07070f;
-    padding: 100px 0;
+    padding-bottom: 20px;
 
     display: flex; //центрирование >
     flex-direction: column; //элементы по вертикали
