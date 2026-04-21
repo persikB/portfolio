@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import backgroundImg from "../../assets/images/background1.svg";
 
-export const PreviewWrapper = styled.div`
+export const PreviewWrapper = styled.section`
     width: 100%;
     min-height: 90vh;
     
@@ -50,13 +50,13 @@ export const PreviewContainer = styled.div`
     padding: 0 80px; //отступ по горизонтали
 `;
 
-export const Text = styled.div`
+export const TextSection = styled.div`
     display: flex;
     flex-direction: column; //вертикальное размещение содержимого
     gap: 25px;
 `;
 
-export const Img = styled.div`
+export const ImgSection = styled.div`
     display: flex; //снова центрирование содержимого >
     justify-content: center;
 `;
