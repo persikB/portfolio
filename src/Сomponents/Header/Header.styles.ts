@@ -9,13 +9,11 @@ export const HeaderWrapper = styled.header`
   margin: 0 auto; //центирует фиксированную ширину
 
   width: 100%;
-  max-width: 1400px;
+  /*max-width: 1400px;*/
   height: 70px;
 
   background: #090a14;
-
-
-
+  
   box-shadow: 0 0 10px 1px #00D9F5;  //тень дающая эффект свечения
 
   z-index: 1000; //всегда по верх других элементов
@@ -31,7 +29,7 @@ export const HeaderNav = styled.nav`
 
 export const HeaderNavList = styled.ul`
   display: flex; //элементы в ряд
-  gap: 40px; //расстояние между элементами
+  gap: clamp(30px, 5vw, 60px); //расстояние между элементами
   list-style: none;
 `;
 

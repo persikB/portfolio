@@ -41,4 +41,5 @@ export const Frame = ({
 export const FrameSvg = styled.svg`
     width: 100%;
     height: auto;
-    display: block;;`
+    display: block;
+;`
