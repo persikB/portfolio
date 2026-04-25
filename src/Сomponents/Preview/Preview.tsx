@@ -8,7 +8,7 @@ import {
     PreviewSection,
 } from "./Preview.styles.ts";
 import {Button} from "../Shared/Button.ts";
-import Avatar from "../../assets/images/avatar.svg";
+import Avatar from "../../assets/images/avatar3.svg";
 import {Frame} from "../sprites/Frame.tsx";
 import {FlexWrapper} from "../Shared/FlexWrapper.ts";
 import {Container} from "../Shared/Container.ts";
@@ -23,7 +23,7 @@ export default function Preview(): JSX.Element {
                     <PreviewContainer>
                         <TextSection>
                             <PreviewLabel>WEB DEVELOPER</PreviewLabel>
-                            <PreviewName>John Doe</PreviewName>
+                            <PreviewName>Hopenesa</PreviewName>
                             <PreviewText>
                                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
                                 sint. Velit officia consequat duis enim velit mollit. Exercitation
