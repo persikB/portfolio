@@ -26,7 +26,7 @@ export default function Skills(): JSX.Element {
                     <SkillsTitle>My skills</SkillsTitle>
                     <SkillsRow>
                         {icons.map((id) => (
-                            <Icon key={id} id={id} width={80} height={80} viewBox={"0 0 150 150"}/>
+                            <Icon key={id} id={id} width={80} height={80} viewBox={"0 0 150 150"} iconHover="visible" iconColor="#FFFFFF3F"/>
                         ))}
                     </SkillsRow>
                 </FlexWrapper>

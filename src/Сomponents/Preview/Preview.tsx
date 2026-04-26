@@ -8,7 +8,7 @@ import {
     PreviewSection,
 } from "./Preview.styles.ts";
 import {Button} from "../Shared/Button.ts";
-import Avatar from "../../assets/images/avatar3.svg";
+import Avatar from "../../assets/images/avatar.svg";
 import {Frame} from "../sprites/Frame.tsx";
 import {FlexWrapper} from "../Shared/FlexWrapper.ts";
 import {Container} from "../Shared/Container.ts";

@@ -9,7 +9,7 @@ import {Container} from "../Shared/Container.ts";
 import {FlexWrapper} from "../Shared/FlexWrapper.ts";
 
 
-const items = ["HOME", "ABOUT ME", "SKILLS", "CONTACTS"];
+const items = ["HOME", "PROJECTS", "SKILLS", "ABOUT ME", "CONTACTS"];
 
 export default function Header(): JSX.Element {
     const [active, setActive] = useState("HOME");

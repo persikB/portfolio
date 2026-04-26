@@ -18,29 +18,29 @@ export const DescriptionSection = styled.section`
 export const DescriptionTitle = styled.h2`
     font-family: Montserrat, sans-serif;
     font-weight: 600;
-    font-size: 4.5rem;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     line-height: 1.5rem;
     letter-spacing: 0.04em;
 
     color: #ffffff;
-    
-    text-shadow: 0 0 0.8rem #0a0e39;
+
+    text-shadow: 0 0 10px #000000;
 
     text-align: center;
     margin-bottom: 25px;
 `;
 
 export const DescriptionText = styled.p`
-    max-width: 800px;
+   
 
     font-family: Montserrat, sans-serif;
     font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 100%;
     letter-spacing: 0.05em;
 
     color: #ffffff;
-    text-shadow: 0 0 0.8rem #0a0e39;
+    text-shadow: 0 0 10px #000000;
 
     text-align: center;
 

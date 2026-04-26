@@ -31,6 +31,8 @@ export default function Footer(): JSX.Element {
                                         width={40}
                                         height={40}
                                         viewBox="0 0 16 16"
+                                        iconHover="none"
+                                        iconColor="#FFFFFF3F"
                                     />
                                 </FooterLink>
                             </FooterItem>
@@ -41,3 +43,5 @@ export default function Footer(): JSX.Element {
         </FooterSection>
     );
 }
+
+

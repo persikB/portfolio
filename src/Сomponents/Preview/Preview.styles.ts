@@ -28,6 +28,11 @@ export const PreviewContainer = styled.div`
     gap: 40px;
 
     flex-wrap: wrap;
+    
+    @media (max-width: 700px) {
+        justify-content: center;
+        gap: 0;
+    }
 `;
 
 export const TextSection = styled.div`
@@ -38,22 +43,27 @@ export const TextSection = styled.div`
     width: clamp(300px, 30vw, auto);
 
     flex: 1 1 300px;
+
+    @media (max-width: 700px) {
+        order: 2;
+        align-items: center;
+    }
 `;
 
 export const PreviewLabel = styled.h1`
     font-family: Tinos, serif;
     font-weight: 400;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(1.3rem, 2vw, 3.5rem);
     color: #ffffff;
     line-height: 100%;
     margin: 0;
-    text-shadow: 0 0 0.5rem #0a0e39;
+    text-shadow: 0 0 10px #000000;
 `;
 
 export const PreviewName = styled.span`
     font-family: Montserrat, sans-serif;
     font-weight: 600;
-    font-size: clamp(1.5rem, 5vw, 4.5rem);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     line-height: 100%;
     margin: 0;
 
@@ -65,18 +75,22 @@ export const PreviewName = styled.span`
 export const PreviewText = styled.p`
     font-family: Montserrat, sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+    font-size:clamp(1rem, 5vw, 1.5rem);
     line-height: 1.5rem;
     letter-spacing: 0.04em;
     color: #ffffff;
     margin: 0;
-    text-shadow: 0 0 0.5rem #0a0e39;
+    text-shadow: 0 0 10px #000000;
 `;
 
 export const PreviewImage = styled.img`
     width: clamp(300px, 30vw, 500px);
     height: auto;
     object-fit: cover;
+
+    @media (max-width: 700px) {
+        order: 1;
+    }
 `;
 
 

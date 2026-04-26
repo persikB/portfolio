@@ -5,6 +5,7 @@ import Description from "./Сomponents/Description/Description.tsx";
 import Skills from "./Сomponents/Skills/Skills.tsx";
 import {GlobalStyle} from "./styles/GlobalStyles.ts";
 import Footer from "./Сomponents/Footer/Footer.tsx";
+import Projects from "./Сomponents/Projects/Projects.tsx";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <GlobalStyle />
             <Header/>
             <Preview/>
+            <Projects/>
             <Skills/>
             <Description/>
             <Footer/>
