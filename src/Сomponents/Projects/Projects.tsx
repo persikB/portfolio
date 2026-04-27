@@ -55,7 +55,7 @@ const projects = [
 
 export default function Projects(): JSX.Element {
     return (
-        <ProjectSection>
+        <ProjectSection id = "projects">
             <Container>
                 <FlexWrapper $direction="column">
                     <ProjectsTitle>Projects</ProjectsTitle>

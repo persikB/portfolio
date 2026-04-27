@@ -11,8 +11,10 @@ export const CardSection = styled.div`
     flex-direction: column;
 
     overflow: hidden;
-    
-    box-shadow: 0 0 0 1px #ff9200;
+
+    border: 1px solid rgba(255, 255, 255, 0.60);
+
+    border-radius: 8px;
 
 `;
 
@@ -71,5 +73,11 @@ export const CardLink = styled.a`
     gap: 10px;
 
     font-size: 1rem;
-    color: #ff9200;
+    background: linear-gradient(90deg, #ff6200, #ffcc00);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+    color: transparent;
 `;

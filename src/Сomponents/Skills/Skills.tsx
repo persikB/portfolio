@@ -20,7 +20,7 @@ const icons = [
 
 export default function Skills(): JSX.Element {
     return (
-        <SkillsSection>
+        <SkillsSection id = "skills">
             <Container>
                 <FlexWrapper $direction="column">
                     <SkillsTitle>My skills</SkillsTitle>

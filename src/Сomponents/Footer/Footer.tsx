@@ -1,43 +1,71 @@
 import {
     FooterSection,
-    FooterList,
+    FooterLinks,
     FooterItem,
-    FooterLink
+    FooterLink, FormGroup
 } from "./Footer.styles.ts";
 
 import {Icon} from "../sprites/Icon.tsx";
 import {Container} from "../Shared/Container.ts";
 import {FlexWrapper} from "../Shared/FlexWrapper.ts";
+import {FooterTitle, FormWrapper, FormLabel, Input, Textarea} from "./Footer.styles.ts";
+import {Button} from "../Shared/Button.ts";
 
 const icons = [
-    "githubSvg",
-    "telegramSvg",
-    "whatsappSvg",
-    "mailSvg"
+    {
+        id: "githubSvg",
+        url: "https://github.com/Hopenesa"
+    },
+    {
+        id: "telegramSvg",
+        url: "https://t.me/persik_redhead"
+    },
+    {
+        id: "whatsappSvg",
+        url: "https://wa.me/89957875078"
+    }
 ];
 
 
 export default function Footer(): JSX.Element {
     return (
-        <FooterSection>
+        <FooterSection id = "contacts">
             <Container>
-                <FlexWrapper $direction="row">
-                    <FooterList>
-                        {icons.map((id) => (
+                <FlexWrapper $direction="column">
+                    <FooterTitle>Contact me</FooterTitle>
+                    <FormWrapper>
+                        <FormGroup>
+                        <FormLabel>Email :</FormLabel>
+                        <Input placeholder="example@gmail.com"/>
+                        </FormGroup>
+
+                        <FormGroup>
+                        <FormLabel>Name :</FormLabel>
+                        <Input placeholder="Mr. Example"/>
+                        </FormGroup>
+                        <FormGroup>
+                        <FormLabel>Message :</FormLabel>
+                        <Textarea placeholder="Let’s work together!"/>
+                        </FormGroup>
+                        <Button type="submit">Send</Button>
+                    </FormWrapper>
+
+                    <FooterLinks>
+                        {icons.map(({id, url}) => (
                             <FooterItem key={id}>
-                                <FooterLink href="#">
+                                <FooterLink href={url} target="_blank" rel="noopener noreferrer">
                                     <Icon
                                         id={id}
                                         width={40}
                                         height={40}
                                         viewBox="0 0 16 16"
-                                        iconHover="none"
-                                        iconColor="#FFFFFF3F"
+                                        iconHover="visible"
+                                        iconColor="#FFFFFF5F"
                                     />
                                 </FooterLink>
                             </FooterItem>
                         ))}
-                    </FooterList>
+                    </FooterLinks>
                 </FlexWrapper>
             </Container>
         </FooterSection>

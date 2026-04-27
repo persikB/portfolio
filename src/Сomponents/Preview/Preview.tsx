@@ -6,16 +6,18 @@ import {
     PreviewText,
     PreviewImage,
     PreviewSection,
+    LinkButton,
 } from "./Preview.styles.ts";
-import {Button} from "../Shared/Button.ts";
 import Avatar from "../../assets/images/avatar.svg";
 import {Frame} from "../sprites/Frame.tsx";
 import {FlexWrapper} from "../Shared/FlexWrapper.ts";
 import {Container} from "../Shared/Container.ts";
+import {scrollToSection} from "../Shared/ScrollToSections.ts";
+
 
 export default function Preview(): JSX.Element {
     return (
-        <PreviewSection>
+        <PreviewSection id="home">
             <Frame id="Frame" viewBox="0 0 1894 74" svgColor="#090a14" isLookUp={false} flippedHorizontal={true}
                    Top="-1px" marginTop="70px"/>
             <Container>
@@ -25,11 +27,11 @@ export default function Preview(): JSX.Element {
                             <PreviewLabel>WEB DEVELOPER</PreviewLabel>
                             <PreviewName>Hopenesa</PreviewName>
                             <PreviewText>
-                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                                sint. Velit officia consequat duis enim velit mollit. Exercitation
-                                veniam consequat sunt.
+                                Frontend developer building web applications with React and TypeScript. I focus on
+                                creating structured, maintainable and responsive interfaces. I care about performance
+                                and consistency across devices. My work is aimed at practical and scalable solutions.
                             </PreviewText>
-                            <Button>Contact me</Button>
+                            <LinkButton onClick={() => scrollToSection("contacts")}>Contact me</LinkButton>
                         </TextSection>
 
                         <PreviewImage src={Avatar} alt="profile"/>

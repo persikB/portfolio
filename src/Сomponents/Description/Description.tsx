@@ -9,7 +9,7 @@ import {FlexWrapper} from "../Shared/FlexWrapper.ts";
 
 export default function Description(): JSX.Element {
     return (
-        <DescriptionSection>
+        <DescriptionSection id = "about me">
                 <Frame id="Frame" viewBox="0 0 1894 74" svgColor="#07070f" isLookUp={false} flippedHorizontal={true} Top="-1px"/>
             <Container>
 

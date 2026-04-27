@@ -5,6 +5,7 @@ export const ProjectSection = styled.section`
     background: #07070f;
 
     display: flex;
+    scroll-margin-top: 70px;
 `;
 
 export const ProjectsTitle = styled.h2`
@@ -17,6 +18,24 @@ export const ProjectsTitle = styled.h2`
     line-height: 100%;
 
     color: #ffffff;
+    
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -15px;
+
+        width: 100px;
+        height: 4px;
+
+        border-radius: 2px;
+
+        background: linear-gradient(90deg, #ff6200, #ffcc00);
+    }
 `;
 
 export const ProjectsGrid = styled.div`

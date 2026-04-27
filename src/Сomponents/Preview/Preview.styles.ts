@@ -75,7 +75,7 @@ export const PreviewName = styled.span`
 export const PreviewText = styled.p`
     font-family: Montserrat, sans-serif;
     font-weight: 400;
-    font-size:clamp(1rem, 5vw, 1.5rem);
+    font-size:clamp(1rem, 5vw, 1.3rem);
     line-height: 1.5rem;
     letter-spacing: 0.04em;
     color: #ffffff;
@@ -90,6 +90,40 @@ export const PreviewImage = styled.img`
 
     @media (max-width: 700px) {
         order: 1;
+    }
+`;
+
+export const LinkButton = styled.a`
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+
+    width: fit-content;
+    height: 45px;
+
+    text-decoration: none;
+
+    color: #0a0e39;
+    font-size: 1rem;
+    font-weight: 600;
+
+    background: linear-gradient(90deg, #ff6200 0%, #ffcc00 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+    
+    padding: 0 10px;
+
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 0 10px #ffc400;
+        transform: scale(1.1);
     }
 `;
 

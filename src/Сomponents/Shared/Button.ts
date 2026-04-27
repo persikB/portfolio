@@ -4,13 +4,13 @@ export const Button = styled.button`
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
 
-    width: 130px;
+    width: 80px;
     height: 45px;
 
     border: none;
 
     color: #0a0e39;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
 
     background: linear-gradient(90deg, #ff6200 0%, #ffcc00 100%);
@@ -19,7 +19,7 @@ export const Button = styled.button`
     align-items: center;
     justify-content: center;
 
-    border-radius: 10px;
+    border-radius: 8px;
 
     cursor: pointer;
 
