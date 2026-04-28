@@ -46,10 +46,7 @@ export default function Header(): JSX.Element {
                                 <li key={item}>
                                     <HeaderNavItem
                                         $active={active === item}
-                                        onClick={() => {
-                                            scrollToSection(item.toLowerCase());
-                                            setActive(item)
-                                        }}
+                                        onClick={() => scrollToSection(item.toLowerCase())}
                                     >
                                         {item}
                                     </HeaderNavItem>
