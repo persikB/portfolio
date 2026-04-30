@@ -4,10 +4,11 @@ export const Button = styled.button`
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
 
-    width: 80px;
+    width: auto;
     height: 45px;
 
     border: none;
+    padding: 0 20px;
 
     color: #0a0e39;
     font-size: 1rem;

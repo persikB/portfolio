@@ -47,7 +47,7 @@ export default function Footer(): JSX.Element {
                         <FormLabel>Message :</FormLabel>
                         <Textarea placeholder="Let’s work together!"/>
                         </FormGroup>
-                        <Button type="submit">Send</Button>
+                        <Button type="submit">Send message</Button>
                     </FormWrapper>
 
                     <FooterLinks>

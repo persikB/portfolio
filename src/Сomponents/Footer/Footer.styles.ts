@@ -10,7 +10,7 @@ export const FooterSection = styled.footer`
 `;
 
 export const FooterTitle = styled.h2`
-    margin: clamp(30px, 4vh, 60px) 0 clamp(30px, 4vh, 60px) 0;
+    margin: clamp(40px, 6vh, 60px) 0 clamp(30px, 4vh, 60px) 0;
 
     font-family: Montserrat, sans-serif;
     font-weight: 600;
@@ -43,7 +43,7 @@ export const FooterTitle = styled.h2`
 
 export const FormWrapper = styled.form`
     width: 100%;
-    max-width:400px;
+    max-width:700px;
     height: auto;
     display: flex;
     flex-direction:column;
@@ -55,7 +55,6 @@ export const FormWrapper = styled.form`
 
 export const FormGroup = styled.div`
     width: 100%;
-    
 ;`
 
 export const FormLabel = styled.label`
@@ -115,7 +114,6 @@ export const FooterLinks = styled.ul`
     display: flex;
     gap: 30px;
     padding: 20px;
-    margin: 0;
     list-style: none;
 `;
 

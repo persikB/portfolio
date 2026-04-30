@@ -8,9 +8,10 @@ export const ProjectSection = styled.section`
     scroll-margin-top: 70px;
 `;
 
+
 export const ProjectsTitle = styled.h2`
     text-align: center;
-    margin-bottom: 50px;
+    margin: clamp(30px, 4vw, 50px) 0;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
     letter-spacing: 0.04em;

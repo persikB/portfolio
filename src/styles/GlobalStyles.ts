@@ -23,6 +23,11 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;  //убираем подчеркивание ссылок по умолчанию
         color: inherit; //ссылка теперь берет цвет родителя, а не дефолтно синяя
     }
+    
+    h1, h2, h3, h4, h5, h6, p, span {
+        margin: 0;
+        padding: 0;
+    }
 
     button {
         font-family: inherit; //берет шрифт из body

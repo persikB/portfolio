@@ -1,5 +1,6 @@
 import sprite from "../../assets/images/FrameSprite.svg"
 import styled from "styled-components";
+import {Theme} from "../../styles/Theme.ts";
 
 type FrameProps = {
     id: string;
@@ -68,4 +69,8 @@ export const FrameSvg = styled.svg<FramePositionProps>`
     ${({$Top}) => $Top && `top: ${$Top};`}
     ${({$Bottom}) => $Bottom && `bottom: ${$Bottom};`}
     ${({$marginTop}) => $marginTop && `margin-top: ${$marginTop};`}
+
+    @media ${Theme.media.mobile} {
+    margin-top: 0;
+}
 `;

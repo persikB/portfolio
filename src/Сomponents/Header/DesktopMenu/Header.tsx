@@ -5,9 +5,9 @@ import {
     HeaderNavItem,
     HeaderNavList,
 } from "./Header.styles.ts";
-import {Container} from "../Shared/Container.ts";
-import {FlexWrapper} from "../Shared/FlexWrapper.ts";
-import {scrollToSection} from "../Shared/ScrollToSections.ts";
+import {Container} from "../../Shared/Container.ts";
+import {FlexWrapper} from "../../Shared/FlexWrapper.ts";
+import {scrollToSection} from "../../Shared/ScrollToSections.ts";
 
 
 const items = ["HOME", "PROJECTS", "SKILLS", "ABOUT ME", "CONTACTS"];
@@ -59,7 +59,3 @@ export default function Header(): JSX.Element {
         </HeaderWrapper>
     );
 }
-
-
-
-

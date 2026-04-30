@@ -1,7 +1,7 @@
 import {
     DescriptionSection,
     DescriptionTitle,
-    DescriptionText
+    DescriptionText, ContentWrapper
 } from "./Description.styles.ts";
 import {Frame} from "../sprites/Frame.tsx";
 import {Container} from "../Shared/Container.ts";
@@ -14,6 +14,7 @@ export default function Description(): JSX.Element {
             <Container>
 
                 <FlexWrapper $direction="column">
+                    <ContentWrapper>
             <DescriptionTitle>About me</DescriptionTitle>
             <DescriptionText>
                 The long barrow was built on land previously inhabited in the Mesolithic period.
@@ -23,6 +24,7 @@ export default function Description(): JSX.Element {
                 within this chamber during the Neolithic period, representing at least
                 nine or ten individuals.
             </DescriptionText>
+                    </ContentWrapper>
 
                 </FlexWrapper>
                     <Frame id="Frame" viewBox="0 0 1894 74" svgColor="#07070f" isLookUp={true} flippedHorizontal={false} Bottom="-1px"/>

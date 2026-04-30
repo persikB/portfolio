@@ -4,7 +4,7 @@ export const CardSection = styled.div`
     width: 350px;
     height: 500px;
 
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
 
     display: flex;
@@ -12,9 +12,9 @@ export const CardSection = styled.div`
 
     overflow: hidden;
 
-    border: 1px solid rgba(255, 255, 255, 0.60);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 
-    border-radius: 8px;
+    border-radius: 2px;
 
 `;
 
@@ -34,7 +34,6 @@ export const CardBody = styled.div`
 `;
 
 export const CardTitle = styled.h3`
-    margin: 0;
     
     font-family: Montserrat, sans-serif;
     font-weight: 600;
@@ -43,8 +42,9 @@ export const CardTitle = styled.h3`
     letter-spacing: 0.04em;
 
     color: #ffffff;
-
-    text-align: center;
+    
+    margin-bottom: 20px;
+    
 `;
 
 export const CardText = styled.p`

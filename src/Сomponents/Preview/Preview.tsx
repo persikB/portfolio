@@ -18,7 +18,7 @@ import {scrollToSection} from "../Shared/ScrollToSections.ts";
 export default function Preview(): JSX.Element {
     return (
         <PreviewSection id="home">
-            <Frame id="Frame" viewBox="0 0 1894 74" svgColor="#090a14" isLookUp={false} flippedHorizontal={true}
+            <Frame id="Frame" viewBox="0 0 1894 74" svgColor="#07070f" isLookUp={false} flippedHorizontal={true}
                    Top="-1px" marginTop="70px"/>
             <Container>
                 <FlexWrapper $direction="row">

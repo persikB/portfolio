@@ -10,7 +10,6 @@ export const SkillsSection = styled.section`
 `;
 
 export const SkillsTitle = styled.h2`
-    margin: 0;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
     font-size: 1rem;
@@ -24,16 +23,26 @@ export const SkillsTitle = styled.h2`
 `;
 
 export const SkillsRow = styled.div`
-    display: flex; //центрирование ^ >
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    
 
-    width: 100%;
-    max-width: 900px;
+    gap: clamp(20px, 4vw, 50px);
+    padding: clamp(40px, 4vw, 70px) 20px;
 
-    gap: clamp(20px, 4vw, 50px); //зависимость отступов от ширины экрана
-    flex-wrap: wrap; //разрешен перенос на другую строку
-    padding: clamp(40px, 4vw, 70px) 20px; //отступы в зависимости от ширины экрана
+    @media (max-width: 800px) {
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+    }
+
+    @media (max-width: 500px) {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+    @media (max-width: 350px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 `;
 
 
