@@ -31,7 +31,7 @@ export default function Header(): JSX.Element {
                 });
             },
             {
-                rootMargin: "-50% 0px -50% 0px"
+                threshold: 0.6
             }
         );
 
@@ -44,7 +44,7 @@ export default function Header(): JSX.Element {
                 });
             },
             {
-                rootMargin: "-50% 0px -50% 0px"
+                threshold: 0.2
             }
         );
 
