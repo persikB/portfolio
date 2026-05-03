@@ -63,11 +63,16 @@ export const DescriptionText = styled.p`
     max-width: 800px;
     font-family: Montserrat, sans-serif;
     font-weight: 400;
-    font-size:clamp(1.3rem, 5vw, 1.1rem);
+    font-size:1.3rem;
     line-height: 1.3;
     letter-spacing: 0.04em;
     color: #ffffff;
 
     text-align: center;
+
+    @media ${Theme.media.mobile} {
+        margin-bottom: 10vh;
+        font-size: 1.1rem;
+    }
     
 `;

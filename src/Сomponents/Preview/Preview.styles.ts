@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import backgroundImg from "../../assets/images/backgroundPreview.svg";
+import {Theme} from "../../styles/Theme.ts";
 
 export const PreviewSection = styled.section`
     width: 100%;
@@ -89,10 +90,13 @@ export const PreviewName = styled.span`
 export const PreviewText = styled.p`
     font-family: Montserrat, sans-serif;
     font-weight: 400;
-    font-size:clamp(1.3rem, 5vw, 1.1rem);
+    font-size:1.3rem;
     line-height: 1.3;
     letter-spacing: 0.04em;
     color: #ffffff;
+    @media ${Theme.media.mobile} {
+        font-size: 1.1rem;
+    }
 `;
 
 export const PreviewImage = styled.img`
