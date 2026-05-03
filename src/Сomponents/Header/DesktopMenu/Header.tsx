@@ -44,7 +44,7 @@ export default function Header(): JSX.Element {
                 });
             },
             {
-                threshold: 0.2
+                threshold: 0.5
             }
         );
 
