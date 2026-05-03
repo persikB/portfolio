@@ -135,6 +135,7 @@ export const LinkButton = styled.a`
     &:hover {
         box-shadow: 0 0 10px #ffc400;
         transform: scale(1.1);
+        background: linear-gradient(90deg, #ffcc00 0%, #ff6200 100%)
     }
 `;
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Theme } from "../../../styles/Theme";
+import {Theme} from "../../../styles/Theme";
 
 export const HeaderWrapper = styled.header`
     position: fixed;
@@ -10,24 +10,24 @@ export const HeaderWrapper = styled.header`
     width: 100%;
     height: 70px;
 
-    background: #090a14; 
-    box-shadow: 0 0 50px 10px #000000; 
-    z-index: 1000; 
-    
+    background: #090a14;
+    box-shadow: 0 0 50px 10px #000000;
+    z-index: 1000;
+
     display: flex;
 
-  @media ${Theme.media.mobile} {
-    background: #07070f;
-    box-shadow: none;
-    z-index: 1;
-    position: relative;
-  }
+    @media ${Theme.media.mobile} {
+        background: #090a14;
+        box-shadow: none;
+        z-index: 1;
+        position: relative;
+    }
 `;
 
 export const HeaderNav = styled.div`
-    width: 100%; 
-    @media ${Theme.media.mobile} { 
-        display: none; 
+    width: 100%;
+    @media ${Theme.media.mobile} {
+        display: none;
     }
 `;
 
@@ -42,25 +42,32 @@ export const HeaderNavList = styled.ul`
 `;
 
 export const HeaderNavItem = styled.a<{ $active?: boolean }>`
-  font-weight: 600; //полужирный текст
-  font-size: 1rem;
-  cursor: pointer; //показывает курсором что на него можно нажать
-  text-transform: uppercase; //все буквы заглавные
-  font-family: 'Oswald', sans-serif; //стиль текста
+    font-weight: 600; //полужирный текст
+    font-size: 1rem;
+    cursor: pointer; //показывает курсором что на него можно нажать
+    text-transform: uppercase; //все буквы заглавные
+    font-family: 'Oswald', sans-serif; //стиль текста
 
-  color: #ff9200;
+    color: #ff9200;
 
-  display: block;
+    display: block;
 
-  transition: color 0.2s ease, text-shadow 0.2s ease; //задаем правила анимации
+    transition: color 0.2s ease, font-size 0.2s ease, transform 0.2s ease; //задаем правила анимации
 
-  ${({$active}) => {
-    if ($active) {
-        return `
-      color: #ff9200;
-      text-shadow: 0 0 20px #ff6200;
+    ${({$active}) => {
+        if ($active) {
+          return `
+      font-size: 1.3rem;
+      background: linear-gradient(90deg, #ff6200 0%, #ffcc00 100%); //применяем градиент к фону
+    -webkit-background-clip: text; //вырезаем фон по форме текста
+    -webkit-text-fill-color: transparent; //делаем текст прозрачной маской
     `;
+        }
+        return "";
+    }}
+    &:hover {
+        transform: scale(1.1);
+        color: #ffcc00;
+
     }
-    return "";
-}}
 `;

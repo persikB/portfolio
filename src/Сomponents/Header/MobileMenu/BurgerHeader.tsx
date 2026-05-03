@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import {
     MobileMenuWrapper,
     BurgerButton,
@@ -9,7 +9,7 @@ import {
     MobileNavItem
 } from "./BurgerHeader.styles.ts";
 
-import { Icon } from "../../sprites/Icon.tsx";
+import {Icon} from "../../sprites/Icon.tsx";
 import {scrollToSection} from "../../Shared/ScrollToSections.ts";
 
 const items = ["HOME", "PROJECTS", "SKILLS", "ABOUT ME", "CONTACTS"];
@@ -24,6 +24,57 @@ export default function BurgerHeader(): JSX.Element {
     const closeMenu = () => {
         setMenuIsOpen(false);
     };
+
+    const [active, setActive] = useState("HOME");
+
+    useEffect(() => {
+        const sections = document.querySelectorAll("section, header, footer");
+        const projectsSection = document.getElementById("projects");
+
+        const defaultObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (
+                        entry.isIntersecting &&
+                        entry.target.id !== "projects"
+                    ) {
+                        setActive(entry.target.id.toUpperCase());
+                    }
+                });
+            },
+            {
+                threshold: 0.6
+            }
+        );
+
+        const projectsObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActive("PROJECTS");
+                    }
+                });
+            },
+            {
+                threshold: 0.2
+            }
+        );
+
+        sections.forEach((section) => {
+            if (section.id !== "projects") {
+                defaultObserver.observe(section);
+            }
+        });
+
+        if (projectsSection) {
+            projectsObserver.observe(projectsSection);
+        }
+
+        return () => {
+            defaultObserver.disconnect();
+            projectsObserver.disconnect();
+        };
+    }, []);
 
 
     return (
@@ -59,8 +110,11 @@ export default function BurgerHeader(): JSX.Element {
                         {items.map((item) => (
                             <MobileNavItem
                                 key={item}
-                                onClick={() => {scrollToSection(item.toLowerCase());
-                                    closeMenu()}}
+                                $active={active === item}
+                                onClick={() => {
+                                    scrollToSection(item.toLowerCase());
+                                    closeMenu()
+                                }}
                             >
                                 {item}
                             </MobileNavItem>

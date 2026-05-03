@@ -14,6 +14,7 @@ import {Frame} from "../sprites/Frame.tsx";
 import {FlexWrapper} from "../Shared/FlexWrapper.ts";
 import {Container} from "../Shared/Container.ts";
 import {scrollToSection} from "../Shared/ScrollToSections.ts";
+import { Fade } from "react-awesome-reveal";
 
 
 export default function Preview(): JSX.Element {
@@ -25,6 +26,7 @@ export default function Preview(): JSX.Element {
                 <FlexWrapper $direction="row">
                     <PreviewContainer>
                         <TextSection>
+                            <Fade direction={"down"} triggerOnce={true}>
                             <PreviewLabel>
                                 <p>WEB DEVELOPER</p>
                                 <Typewriter
@@ -45,8 +47,11 @@ export default function Preview(): JSX.Element {
                                 and consistency across devices. My work is aimed at practical and scalable solutions.
                             </PreviewText>
                             <LinkButton onClick={() => scrollToSection("contacts")}>Contact me</LinkButton>
+                            </Fade>
                         </TextSection>
+                        <Fade direction={"down"} triggerOnce={true}>
                         <PreviewImage src={Avatar} alt="profile"/>
+                        </Fade>
                     </PreviewContainer>
                 </FlexWrapper>
             </Container>

@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import {Theme} from "../../../styles/Theme.ts";
 
 export const CardSection = styled.div`
     width: 350px;
     height: 500px;
 
-    background: rgba(255, 255, 255, 0.05);
+    background: #0D0E1B;
     backdrop-filter: blur(10px);
 
     display: flex;
@@ -12,9 +13,21 @@ export const CardSection = styled.div`
 
     overflow: hidden;
 
-    border: 1px solid rgba(255, 255, 255, 0.1);
-
     border-radius: 2px;
+
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+        transform-origin: center;
+    }
+
+    @media ${Theme.media.mobile} {
+        &:hover {
+            transform: none;
+        }
+    }
+
 
 `;
 
@@ -80,4 +93,12 @@ export const CardLink = styled.a`
 
     background-clip: text;
     color: transparent;
+    transition: transform 0.2s ease;
+
+
+    &:hover {
+        transform: scale(1.1);
+        transform-origin: center;
+        text-decoration: underline;
+    }
 `;

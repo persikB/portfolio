@@ -7,6 +7,7 @@ import {
 import {Icon} from "../sprites/Icon.tsx";
 import {Container} from "../Shared/Container.ts";
 import {FlexWrapper} from "../Shared/FlexWrapper.ts";
+import { Zoom } from "react-awesome-reveal";
 
 const icons = [
     { id: "html5Svg", viewBox: "0 0 20 20" },
@@ -32,6 +33,7 @@ export default function Skills(): JSX.Element {
                 <FlexWrapper $direction="column">
                     <SkillsTitle>My skills</SkillsTitle>
                     <SkillsRow>
+                        <Zoom cascade={true} duration={200} triggerOnce={true}>
                         {icons.map((icon) => (
                             <Icon
                                 key={icon.id}
@@ -43,6 +45,7 @@ export default function Skills(): JSX.Element {
                                 iconColor="#FFFFFF7F"
                             />
                         ))}
+                            </Zoom>
                     </SkillsRow>
                 </FlexWrapper>
             </Container>

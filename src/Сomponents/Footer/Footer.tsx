@@ -12,6 +12,7 @@ import {FlexWrapper} from "../Shared/FlexWrapper.ts";
 import {FooterTitle, FormWrapper, FormLabel, Input, Textarea} from "./Footer.styles.ts";
 import {Button} from "../Shared/Button.ts";
 import {ElementRef, useRef} from "react";
+import {Slide} from "react-awesome-reveal";
 
 const icons = [
     {
@@ -50,9 +51,10 @@ export default function Footer(): JSX.Element {
                 },
             );
     }
-        return (
-            <FooterSection id="contacts">
-                <Container>
+    return (
+        <FooterSection id="contacts">
+            <Container>
+                <Slide triggerOnce={true} direction={"up"}>
                     <FlexWrapper $direction="column">
                         <FooterTitle>Contact me</FooterTitle>
                         <FormWrapper ref={form} onSubmit={sendEmail}>
@@ -89,9 +91,10 @@ export default function Footer(): JSX.Element {
                             ))}
                         </FooterLinks>
                     </FlexWrapper>
-                </Container>
-            </FooterSection>
-        );
-    }
+                </Slide>
+            </Container>
+        </FooterSection>
+    );
+}
 
 

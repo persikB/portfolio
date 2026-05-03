@@ -32,7 +32,7 @@ export const BurgerButton = styled.button<BurgerButtonProps>`
     align-items: center;
     justify-content: center;
 
-    background: #07070f;
+    background: #090a14;
     border: none;
     border-radius: 10px;
 
@@ -93,7 +93,7 @@ export const MobileNavList = styled.ul`
     padding: 0;
 `;
 
-export const MobileNavItem = styled.li`
+export const MobileNavItem = styled.li<{ $active?: boolean }>`
     font-family: Montserrat, sans-serif;
     font-size: 1rem;
     font-weight: 600;
@@ -101,4 +101,16 @@ export const MobileNavItem = styled.li`
 
     color: white;
     cursor: pointer;
+    
+    ${({$active}) => {
+        if ($active) {
+            return `
+      font-size: 1.3rem;
+      background: linear-gradient(90deg, #ff6200 0%, #ffcc00 100%); //применяем градиент к фону
+    -webkit-background-clip: text; //вырезаем фон по форме текста
+    -webkit-text-fill-color: transparent; //делаем текст прозрачной маской
+    `;
+        }
+        return "";
+    }}
 `;

@@ -3,7 +3,7 @@ import {Container} from "../Shared/Container.ts";
 import {FlexWrapper} from "../Shared/FlexWrapper.ts";
 import { Card } from "../Shared/Card/Card.tsx";
 import Image from "../../assets/images/CardImage.webp"
-
+import { Fade } from "react-awesome-reveal";
 
 const projects = [
     {
@@ -60,9 +60,14 @@ export default function Projects(): JSX.Element {
                 <FlexWrapper $direction="column">
                     <ProjectsTitle>Projects</ProjectsTitle>
                     <ProjectsGrid>
+                        <Fade cascade
+                              damping={0.2}
+                              duration={700}
+                              triggerOnce>
                         {projects.map((project, i) => (
                             <Card key={i} {...project} />
                         ))}
+                        </Fade>
                     </ProjectsGrid>
                 </FlexWrapper>
             </Container>

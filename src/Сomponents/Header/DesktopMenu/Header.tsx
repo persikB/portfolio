@@ -17,11 +17,15 @@ export default function Header(): JSX.Element {
 
     useEffect(() => {
         const sections = document.querySelectorAll("section, header, footer");
+        const projectsSection = document.getElementById("projects");
 
-        const observer = new IntersectionObserver(
+        const defaultObserver = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
+                    if (
+                        entry.isIntersecting &&
+                        entry.target.id !== "projects"
+                    ) {
                         setActive(entry.target.id.toUpperCase());
                     }
                 });
@@ -31,9 +35,33 @@ export default function Header(): JSX.Element {
             }
         );
 
-        sections.forEach((section) => observer.observe(section));
+        const projectsObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActive("PROJECTS");
+                    }
+                });
+            },
+            {
+                threshold: 0.4
+            }
+        );
 
-        return () => observer.disconnect();
+        sections.forEach((section) => {
+            if (section.id !== "projects") {
+                defaultObserver.observe(section);
+            }
+        });
+
+        if (projectsSection) {
+            projectsObserver.observe(projectsSection);
+        }
+
+        return () => {
+            defaultObserver.disconnect();
+            projectsObserver.disconnect();
+        };
     }, []);
 
     return (

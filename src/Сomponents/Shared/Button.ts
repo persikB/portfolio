@@ -31,6 +31,7 @@ export const Button = styled.button`
         box-shadow: 0 0 10px #ffc400;
         transform: scale(1.1);
         transform-origin: center;
+        background: linear-gradient(90deg, #ffcc00 0%, #ff6200 100%)
     }
 
 `;
