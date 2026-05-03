@@ -89,7 +89,7 @@ export const PreviewName = styled.span`
 export const PreviewText = styled.p`
     font-family: Montserrat, sans-serif;
     font-weight: 400;
-    font-size:clamp(1rem, 5vw, 1.1rem);
+    font-size:clamp(1.3rem, 5vw, 1.1rem);
     line-height: 1.3;
     letter-spacing: 0.04em;
     color: #ffffff;

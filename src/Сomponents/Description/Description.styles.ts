@@ -33,7 +33,7 @@ export const DescriptionSection = styled.section`
 
 export const ContentWrapper = styled.div`
     margin-top: auto;
-    margin-bottom: 20vh;
+    margin-bottom: 15vh;
 
     @media ${Theme.media.mobile} {
         margin-bottom: 10vh
@@ -63,7 +63,7 @@ export const DescriptionText = styled.p`
     max-width: 800px;
     font-family: Montserrat, sans-serif;
     font-weight: 400;
-    font-size:clamp(1rem, 5vw, 1.1rem);
+    font-size:clamp(1.3rem, 5vw, 1.1rem);
     line-height: 1.3;
     letter-spacing: 0.04em;
     color: #ffffff;
