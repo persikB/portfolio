@@ -11,7 +11,7 @@ import {Container} from "../Shared/Container.ts";
 import {FlexWrapper} from "../Shared/FlexWrapper.ts";
 import {FooterTitle, FormWrapper, FormLabel, Input, Textarea} from "./Footer.styles.ts";
 import {Button} from "../Shared/Button.ts";
-import {ElementRef, useRef} from "react";
+import React, {ElementRef, useRef} from "react";
 import {Slide} from "react-awesome-reveal";
 
 const icons = [
@@ -33,7 +33,7 @@ const icons = [
 export default function Footer(): JSX.Element {
     const form = useRef<ElementRef<'form'>>(null);
 
-    const sendEmail = (e: any) => {
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if (!form.current) return
@@ -44,11 +44,12 @@ export default function Footer(): JSX.Element {
             })
             .then(
                 () => {
-                    console.log('SUCCESS!');
+                    console.log("SUCCESS!");
+                    form.current?.reset();
                 },
                 (error) => {
-                    console.log('FAILED...', error.text);
-                },
+                    console.log("FAILED...", error.text);
+                }
             );
     }
     return (
