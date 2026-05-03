@@ -46,6 +46,7 @@ export const PreviewContainer = styled.div`
         flex-direction: column-reverse;
         justify-content: center;
         gap: 0;
+        padding: 20px 0;
     }
 `;
 
